@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Novi - HTML & CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: darkgrey;
+
+            min-height: 100vh;
+        }
+    </style>
+    <style>
+        body {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        body > * { /* > direct child of body */
+            /*
+            Sets the default of all items to be equally
+            as large and take up maximum space
+            */
+            flex: 1 100%; /* grow basis */
+        }
+
+        header {
+            background: red;
+        }
+
+        aside {
+            background: blue;
+        }
+
+        main {
+            background: deeppink;
+        }
+        section, article {
+            background: #f0fa;
+        }
+
+        footer {
+            /* snap footer to bottom */
+            margin-top: auto;
+
+            min-height: 100px;
+            background: green;
+        }
+
+        footer > section {
+            /*
+            footer sections all get same amount
+            of space to distribute
+            */
+            flex: 1; /* grow, basis = 0 */
+        }
+
+        @media all and (min-width: 600px) {
+            aside {
+                flex: 1 0 0; /* grow shrink basis */
+            }
+            main {
+                flex: 4 auto;
+            }
+            footer {
+                display: flex;
+            }
+        }
+
+        @media all and (min-width: 800px) {
+
+            main {
+                flex: 5 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    header
+    <nav></nav>
+</header>
+<aside>aside</aside>
+<main>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+</main>
+<footer>
+    <section>footer 1</section>
+    <section>footer 2</section>
+    <section>footer 3</section>
+</footer>
+</body>
+</html>
