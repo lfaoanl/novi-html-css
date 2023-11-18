@@ -29,12 +29,13 @@ footer > section {
     flex: 1; /* grow, basis = 0 */
 }
 
+/* Start at big screens */
 @media all and (min-width: 600px) {
     nav {
         flex: 1 0 0; /* grow shrink basis */
     }
     main {
-        flex: 4 auto;
+        flex: 4 min-content;
     }
     footer {
         display: flex;
@@ -44,6 +45,27 @@ footer > section {
 @media all and (min-width: 800px) {
 
     main {
-        flex: 5 auto;
+        flex: 5 min-content;
+    }
+}
+
+/* Small screens and smaller */
+@media all and (max-width: 599px) {
+    header {
+        flex-flow: row wrap;
+    }
+    header section.search {
+        width: 100%;
+        order: 3;
+        flex: auto;
+    }
+    header section.search .search-input {
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    nav {
+        box-shadow: 0 0 3px #eee;
+        margin-bottom: 1em;
     }
 }

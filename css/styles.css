@@ -3,20 +3,69 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/*
+    Start header
+*/
 header {
-    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
 }
 
-aside {
+/*
+    End header
+*/
+
+/*
+    Start nav
+*/
+nav {
+    min-width: 132px;
 }
+nav ul {
+    margin: 0.5em;
+}
+nav ul:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+nav ul li {
+    padding: 0 .5em;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 45px;
+    line-height: 45px;
+}
+nav ul li:hover {
+    cursor: pointer;
+    background: #eee;
+    box-shadow: 0 0 3px #eee;
+}
+/*
+    End nav
+*/
+
+/*
+    Start main
+*/
 
 main {
-    background: deeppink;
-}
-section, article {
+    margin: 0 2em;
+    flex-basis: min-content; /* prevents flex item from getting too large when content grows */
 }
 
+/*
+    End main
+*/
+
+/*
+    Start footer
+*/
+
 footer {
+    margin-top: 2em;
     box-shadow: 0 -1px 3px #eee;
     background: #fff;}
 footer > section {
@@ -25,4 +74,17 @@ footer > section {
 }
 footer > section:not(:last-child) {
     border-right: 1px solid #eee;
+}
+
+footer section ul {
+    margin-bottom: 0.2em;
+}
+/*
+    End footer
+*/
+
+@media all and (min-width: 600px) {
+    body {
+        font-size: 14px;
+    }
 }
