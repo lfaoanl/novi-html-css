@@ -1,0 +1,28 @@
+body {
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+header {
+    background: red;
+}
+
+aside {
+}
+
+main {
+    background: deeppink;
+}
+section, article {
+}
+
+footer {
+    box-shadow: 0 -1px 3px #eee;
+    background: #fff;}
+footer > section {
+    padding: 1em;
+    margin: 1em;
+}
+footer > section:not(:last-child) {
+    border-right: 1px solid #eee;
+}

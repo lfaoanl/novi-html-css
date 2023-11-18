@@ -14,27 +14,11 @@ body > * { /* > direct child of body */
     flex: 1 100%; /* grow basis */
 }
 
-header {
-    background: red;
-}
-
-aside {
-    background: blue;
-}
-
-main {
-    background: deeppink;
-}
-section, article {
-    background: #f0fa;
-}
-
 footer {
     /* snap footer to bottom */
     margin-top: auto;
 
     min-height: 100px;
-    background: green;
 }
 
 footer > section {
@@ -46,7 +30,7 @@ footer > section {
 }
 
 @media all and (min-width: 600px) {
-    aside {
+    nav {
         flex: 1 0 0; /* grow shrink basis */
     }
     main {
